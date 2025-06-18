@@ -1,0 +1,32 @@
+{
+    "name": "highq/laravel-image-processor",
+    "description": "A Laravel package for image customization, resizing and cropping",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Highq\\LaravelImageProcessor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "psalmistcom",
+            "email": "dadewale9@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.0|^10.0",
+        "intervention/image": "^2.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Highq\\ImageProcessor\\ImageProcessorServiceProvider"
+            ],
+            "aliases": {
+                "ImageProcessor": "Highq\\ImageProcessor\\Facades\\ImageProcessor"
+            }
+        }
+    }
+}
