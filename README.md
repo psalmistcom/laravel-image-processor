@@ -32,6 +32,7 @@ php artisan vendor:publish --provider="YourVendor\ImageProcessor\ImageProcessorS
 ```
 
 ⚙️ Configuration
+
 Edit ![config/image-processor.php] to customize:
 
 ```bash
@@ -52,4 +53,16 @@ return [
         // Add your custom presets here
     ],
 ];
+```
+
+🚀 Basic Usage
+
+Process an Uploaded Image
+
+```bash
+use YourVendor\ImageProcessor\Facades\ImageProcessor;
+
+$path = ImageProcessor::make($request->file('image'))
+    ->resize(1200, 800)
+    ->save('storage/app/public/images/processed.jpg');
 ```
