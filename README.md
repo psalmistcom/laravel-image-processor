@@ -32,7 +32,24 @@ php artisan vendor:publish --provider="YourVendor\ImageProcessor\ImageProcessorS
 ```
 
 ⚙️ Configuration
+Edit ![config/image-processor.php] to customize:
 
 ```bash
-Edit ![config/image-processor.php] to customize:
+return [
+    'driver' => env('IMAGE_DRIVER', 'gd'), // 'gd' or 'imagick'
+
+    'defaults' => [
+        'quality' => 90,
+        'format' => 'jpg',
+    ],
+
+    'presets' => [
+        'thumbnail' => [
+            'width' => 150,
+            'height' => 150,
+            'method' => 'fit',
+        ],
+        // Add your custom presets here
+    ],
+];
 ```
