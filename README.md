@@ -24,3 +24,15 @@ Install via Composer:
 ```bash
 composer require your-vendor/laravel-image-processor
 ```
+
+Publish the config file (optional):
+
+```bash
+php artisan vendor:publish --provider="YourVendor\ImageProcessor\ImageProcessorServiceProvider" --tag="config"
+```
+
+⚙️ Configuration
+
+```bash
+Edit ![config/image-processor.php] to customize:
+```
