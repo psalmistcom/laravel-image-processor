@@ -66,3 +66,11 @@ $path = ImageProcessor::make($request->file('image'))
     ->resize(1200, 800)
     ->save('storage/app/public/images/processed.jpg');
 ```
+
+Use a Preset
+
+```bash
+$thumbnail = ImageProcessor::make($image)
+    ->applyPreset('thumbnail')
+    ->save('path/to/thumbnail.jpg');
+```
